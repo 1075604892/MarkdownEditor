@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea3ba419-242b-45c2-af3d-bd3fda893aca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/AddBookmarkOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/AddTitleAtOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/AddTitleOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/BookmarkOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/CommandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/DeleteOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/ErrorOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/SaveOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/TreeOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/element/Glyph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/element/LinkGlyph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/element/RootGlyph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/element/TittleGlyph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/AddOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/AddBookmarkOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/AddTitleAtOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/AddTitleOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/BookmarkOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/BookmarkOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/TreeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/TreeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/Glyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Glyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/LinkGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/LinkGlyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/RootGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/RootGlyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/element/TittleGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/TittleGlyph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +76,8 @@
       <workItem from="1667823528000" duration="4652000" />
       <workItem from="1667914487121" duration="873000" />
       <workItem from="1667998750561" duration="11375000" />
+      <workItem from="1668016676233" duration="2681000" />
+      <workItem from="1668075780578" duration="5689000" />
     </task>
     <task id="LOCAL-00001" summary="初次上传">
       <created>1667750105184</created>

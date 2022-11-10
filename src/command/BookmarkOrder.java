@@ -1,6 +1,5 @@
 package command;
 
-import element.Glyph;
 import element.RootGlyph;
 
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ public class BookmarkOrder implements Order {
     RootGlyph currentRootGlyph;
     String filename;
 
-    BookmarkOrder(ArrayList<RootGlyph> rootGlyphs, RootGlyph currentRootGlyph, String filename) {
+    public BookmarkOrder(ArrayList<RootGlyph> rootGlyphs, RootGlyph currentRootGlyph, String filename) {
         this.rootGlyphs = rootGlyphs;
         this.currentRootGlyph = currentRootGlyph;
         this.filename = filename;

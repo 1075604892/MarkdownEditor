@@ -1,5 +1,3 @@
-import command.CommandController;
-
 import java.util.Scanner;
 
 public class Main {
