@@ -7,11 +7,9 @@ import java.util.ArrayList;
 
 public class CommandController {
     private static CommandController instance;
-    private final ArrayList<RootGlyph> rootGlyphs;
-    private RootGlyph currentGlyph;
+    private static RootGlyph currentGlyph;
 
     private CommandController() {
-        rootGlyphs = new ArrayList<>();
         currentGlyph = new RootGlyph();
     }
 
@@ -22,6 +20,10 @@ public class CommandController {
         return instance;
     }
 
+    public static void setCurrentGlyph(RootGlyph currentGlyph) {
+        CommandController.currentGlyph = currentGlyph;
+    }
+
     public void analyzeCommand(String command) {
         //指令预处理
         String[] commands = command.split(" ");
@@ -29,13 +31,13 @@ public class CommandController {
         Order order = new ErrorOrder();
         if (commands[0].startsWith("bookmark") && commands.length == 2 && isParamName(commands[1])) {
             //创建新的文件
-            order = new BookmarkOrder(rootGlyphs, currentGlyph, handleParamName(commands[1]));
+            order = new BookmarkOrder(currentGlyph ,handleParamName(commands[1]));
         } else if (commands[0].startsWith("add-title") && commands.length == 2 && isParamName(commands[1])) {
             //创建标题
             order = new AddOrder(currentGlyph, new TittleGlyph(handleParamName(commands[1])), null);
         } else if (commands[0].equals("show-tree")) {
             //展示树形结构
-            order = new TreeOrder(currentGlyph, commands[0]);
+            order = new TreeOrder(currentGlyph, 1);
         } else if (commands[0].startsWith("add-title") && commands.length == 4
                 && isParamName(commands[1]) && commands[2].equals("at") && isParamName(commands[3])
         ) {
@@ -47,6 +49,8 @@ public class CommandController {
             //创建连接
             String[] params = handleParamLink(commands[1]);
             order = new AddOrder(currentGlyph, new LinkGlyph(params[0], params[1]), commands[3].replace("\"", ""));
+        } else if (commands[0].equals("save")) {
+            order = new SaveOrder(currentGlyph);
         }
         order.execute();
     }

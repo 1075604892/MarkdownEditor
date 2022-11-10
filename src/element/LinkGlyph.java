@@ -10,7 +10,16 @@ public class LinkGlyph extends Glyph {
     }
 
     @Override
-    public String show() {
-        return "[" + title + "]" + "(" + link + ")";
+    public String draw(int index) {
+        StringBuilder prefix = new StringBuilder();
+        for (int i = 1; i < index; i++) {
+            prefix.append("\t");
+        }
+        return prefix + "\"" + title + "\"";
+    }
+
+    @Override
+    public String text(int index) {
+        return "[" + title + "]" + "(" + link + ")\n";
     }
 }

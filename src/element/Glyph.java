@@ -14,6 +14,9 @@ public abstract class Glyph {
         return subGlyphs;
     }
 
-    //定义如何显示在页面上
-    public abstract String show();
+
+    //定义如何显示在文本页面上
+    public abstract String draw(int index);
+
+    public abstract String text(int index);
 }

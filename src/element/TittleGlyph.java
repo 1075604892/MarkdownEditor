@@ -12,7 +12,20 @@ public class TittleGlyph extends Glyph {
     }
 
     @Override
-    public String show() {
-        return title;
+    public String draw(int index) {
+        StringBuilder prefix = new StringBuilder();
+        for (int i = 1; i < index; i++) {
+            prefix.append("\t");
+        }
+        return prefix + title;
+    }
+
+    @Override
+    public String text(int index) {
+        StringBuilder prefix = new StringBuilder();
+        for (int i = 0; i < index; i++) {
+            prefix.append("#");
+        }
+        return prefix + title + "\n";
     }
 }
