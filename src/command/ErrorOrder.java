@@ -6,4 +6,9 @@ public class ErrorOrder implements Order {
     public void execute() {
         System.out.println("Error command");
     }
+
+    @Override
+    public void undo() {
+
+    }
 }

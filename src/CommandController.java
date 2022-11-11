@@ -9,8 +9,13 @@ public class CommandController {
     private static CommandController instance;
     private static RootGlyph currentGlyph;
 
+    private static ArrayList<Order> orderHistory;
+    private int orderPoint;
+
     private CommandController() {
         currentGlyph = new RootGlyph();
+        orderHistory = new ArrayList<>();
+        orderPoint = 0;
     }
 
     public static CommandController getInstance() {
@@ -29,9 +34,9 @@ public class CommandController {
         String[] commands = command.split(" ");
 
         Order order = new ErrorOrder();
-        if (commands[0].startsWith("bookmark") && commands.length == 2 && isParamName(commands[1])) {
+        if ((commands[0].startsWith("bookmark") || commands[0].startsWith("open")) && commands.length == 2 && isParamName(commands[1])) {
             //创建新的文件
-            order = new BookmarkOrder(currentGlyph ,handleParamName(commands[1]));
+            order = new BookmarkOrder(currentGlyph, handleParamName(commands[1]));
         } else if (commands[0].startsWith("add-title") && commands.length == 2 && isParamName(commands[1])) {
             //创建标题
             order = new AddOrder(currentGlyph, new TittleGlyph(handleParamName(commands[1])), null);
@@ -50,7 +55,15 @@ public class CommandController {
             String[] params = handleParamLink(commands[1]);
             order = new AddOrder(currentGlyph, new LinkGlyph(params[0], params[1]), commands[3].replace("\"", ""));
         } else if (commands[0].equals("save")) {
+            //保存文件
             order = new SaveOrder(currentGlyph);
+        } else if (commands[0].equals("undo")) {
+            //回滚
+            //todo
+        } else if (commands[0].startsWith("delete-bookmark") && commands.length == 2 && isParamName(commands[1])) {
+            order = new DeleteOrder(currentGlyph, currentGlyph.searchAllLink(handleParamName(commands[1])));
+        }else if (commands[0].startsWith("delete-title") && commands.length == 2 && isParamName(commands[1])) {
+            order = new DeleteOrder(currentGlyph, currentGlyph.searchAllTitle(handleParamName(commands[1])));
         }
         order.execute();
     }

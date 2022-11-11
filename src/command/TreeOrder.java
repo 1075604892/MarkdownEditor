@@ -20,4 +20,9 @@ public class TreeOrder implements Order {
     public void execute() {
         currentGlyph.tree(currentGlyph, 0);
     }
+
+    @Override
+    public void undo() {
+
+    }
 }

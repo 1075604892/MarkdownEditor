@@ -26,6 +26,6 @@ public class TittleGlyph extends Glyph {
         for (int i = 0; i < index; i++) {
             prefix.append("#");
         }
-        return prefix + title + "\n";
+        return prefix + " " + title + "\n";
     }
 }

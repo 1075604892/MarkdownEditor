@@ -9,6 +9,10 @@ public class LinkGlyph extends Glyph {
         this.link = link;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     @Override
     public String draw(int index) {
         StringBuilder prefix = new StringBuilder();

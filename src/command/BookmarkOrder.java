@@ -18,4 +18,9 @@ public class BookmarkOrder implements Order {
     public void execute() {
         rootGlyph.initialization(filename);
     }
+
+    @Override
+    public void undo() {
+
+    }
 }

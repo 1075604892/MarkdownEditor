@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea3ba419-242b-45c2-af3d-bd3fda893aca" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2.bmk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp2.bmk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkdownEditor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MarkdownEditor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/AddOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/AddOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/command/BookmarkOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/BookmarkOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/DeleteOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/DeleteOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/ErrorOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/ErrorOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/command/SaveOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/SaveOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/command/TreeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/TreeOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/Glyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/Glyph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/LinkGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/LinkGlyph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/RootGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/RootGlyph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/element/TittleGlyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/element/TittleGlyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.bmk" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -41,12 +48,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
     "last_opened_file_path": "D:/wze/program/MarkdownEditor",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -54,8 +71,14 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\wze\program\MarkdownEditor" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MarkdownEditor" />
@@ -63,9 +86,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestAll.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarkdownEditor" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAll" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAll.testAddTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarkdownEditor" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAll" />
+      <option name="METHOD_NAME" value="testAddTitle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAll.testAddTitleAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarkdownEditor" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAll" />
+      <option name="METHOD_NAME" value="testAddTitleAt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Main" />
+        <item itemvalue="JUnit.TestAll.testAddTitle" />
+        <item itemvalue="JUnit.TestAll.testAddTitleAt" />
+        <item itemvalue="JUnit.TestAll.testAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -83,6 +139,7 @@
       <workItem from="1667998750561" duration="11375000" />
       <workItem from="1668016676233" duration="2681000" />
       <workItem from="1668075780578" duration="20237000" />
+      <workItem from="1668132263281" duration="10900000" />
     </task>
     <task id="LOCAL-00001" summary="初次上传">
       <created>1667750105184</created>

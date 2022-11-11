@@ -3,6 +3,8 @@ package command;
 import element.Glyph;
 import element.RootGlyph;
 
+import java.util.ArrayList;
+
 public class AddOrder implements Order {
     private final RootGlyph rootGlyph;
     private final Glyph newGlyph;
@@ -18,5 +20,10 @@ public class AddOrder implements Order {
     @Override
     public void execute() {
         rootGlyph.add(newGlyph, parentTitleName);
+    }
+
+    @Override
+    public void undo() {
+        rootGlyph.deleteOne(newGlyph);
     }
 }

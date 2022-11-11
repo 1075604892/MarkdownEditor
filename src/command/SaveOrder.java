@@ -13,4 +13,9 @@ public class SaveOrder implements Order {
     public void execute() {
         rootGlyph.save();
     }
+
+    @Override
+    public void undo() {
+
+    }
 }
